@@ -8,3 +8,13 @@ convention = {
 metadata = MetaData(naming_convention=convention)
 
 Base = declarative_base(metadata=metadata)
+
+
+class Game(Base):
+    __tablename__ = 'games'
+
+    id = Column(String(), primary_key=True)
+    title = Column(String())
+    genre = Column(String())
+    platform = Column(String())
+    price = Column(Integer())
