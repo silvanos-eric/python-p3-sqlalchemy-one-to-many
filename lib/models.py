@@ -22,9 +22,9 @@ class Game(Base):
     reviews = relationship('Review', backref=backref('game'))
 
     def __repr__(self):
-        return f"Game(id={self.id}, ) " + \
-            f"title={self.title} " \
-                f"Platform={self.platform})"
+        return f"Game(id={self.id}, " + \
+            f"title={self.title}, " + \
+                f"platform={self.platform})"
 
 
 class Review(Base):
