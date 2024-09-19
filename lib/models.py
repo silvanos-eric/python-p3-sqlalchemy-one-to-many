@@ -13,7 +13,7 @@ Base = declarative_base(metadata=metadata)
 class Game(Base):
     __tablename__ = 'games'
 
-    id = Column(String(), primary_key=True)
+    id = Column(Integer(), primary_key=True)
     title = Column(String())
     genre = Column(String())
     platform = Column(String())
